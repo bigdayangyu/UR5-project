@@ -1,7 +1,7 @@
 # UR5-project
 
 The Objective of the project is to use the UR5 robot to complete a "place-and-draw" task using inverse kinematics joint angle control, using diﬀerential kinematics rate control, as well as Gradient-based control. 
-<p align="center"><img src ="https://github.com/bigdayangyu/UR5-project/blob/master/image/setup.png" width = 30% /></p>
+<p align="center"><img src ="https://github.com/bigdayangyu/UR5-project/blob/master/image/ur5.gif" width = 30% /></p>
 
 When the program starts, user is prompted by the program to “teach” the robot by manually moving the end effector (EE) and marker to the start and end points of each line. When the user indicates that the robot is in position, the algorithm captures the current joint angles using API ur5.get_current_joints() before prompting the user for the next point. This continues until all 4 start and end points are collected. Based off of the start and end points of each line, the program generate intermediate points and using selected control method to calculate the forward kinematics of the robot, and then generate the inverse kinematics to move the robot to the desired location.
 
